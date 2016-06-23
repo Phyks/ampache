@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "26aee2ac9f0de6f482d3dac60e3e00a7",
+    "hash": "ce9dce52d5d9bffb7b417d0a2e63a6dc",
     "content-hash": "2244cb24151474f372fedc5c54823bc2",
     "packages": [
         {
@@ -1296,12 +1296,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/JamesHeinrich/getID3.git",
-                "reference": "d77b2d2e172f25622c61cdecde8edbf07195e5b0"
+                "reference": "c2c6f5f8fbe84c6009e6f601bb09f8a7d2a1fef0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JamesHeinrich/getID3/zipball/d77b2d2e172f25622c61cdecde8edbf07195e5b0",
-                "reference": "d77b2d2e172f25622c61cdecde8edbf07195e5b0",
+                "url": "https://api.github.com/repos/JamesHeinrich/getID3/zipball/c2c6f5f8fbe84c6009e6f601bb09f8a7d2a1fef0",
+                "reference": "c2c6f5f8fbe84c6009e6f601bb09f8a7d2a1fef0",
                 "shasum": ""
             },
             "require": {
@@ -1324,7 +1324,7 @@
                 "php",
                 "tags"
             ],
-            "time": "2016-02-24 13:20:20"
+            "time": "2016-06-08 18:50:07"
         },
         {
             "name": "jeromeetienne/jquery-qrcode",
@@ -1346,7 +1346,7 @@
                     ]
                 }
             },
-            "time": "2015-04-15 13:47:34"
+            "time": "2016-01-12 10:51:25"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -1434,7 +1434,7 @@
                 "reference": "master"
             },
             "type": "library",
-            "time": "2013-06-18 13:13:19"
+            "time": "2016-06-14 20:05:00"
         },
         {
             "name": "kumailht/responsive-elements",

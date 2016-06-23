@@ -214,7 +214,7 @@ class vainfo
             try {
                 $this->_raw = $this->_getID3->analyze(Core::conv_lc_file($this->filename));
             } catch (Exception $error) {
-                debug_event('getID2', 'Unable to catalog file: ' . $error->getMessage(), 1);
+                debug_event('getID3', 'Unable to catalog file: ' . $error->getMessage(), 1);
             }
         }
 
@@ -269,11 +269,14 @@ class vainfo
 
             if ($tagWriter->WriteTags()) {
                 if (!empty($tagWriter->warnings)) {
-                    debug_event('vainfo' , 'FWarnings ' . implode("\n", $tagWriter->warnings), 5);
+                    debug_event('vainfo', 'FWarnings ' . implode("\n", $tagWriter->warnings), 3);
                 }
             } else {
-                debug_event('vainfo' , 'Failed to write tags! ' . implode("\n", $tagWriter->errors), 5);
+                debug_event('vainfo', 'Failed to write tags! ' . implode("\n", $tagWriter->errors), 1);
             }
+        }
+        else {
+            debug_event('vainfo', 'No id3v2 tags. No edition is at all possible.', 3);
         }
     } // write_id3
 
@@ -286,6 +289,13 @@ class vainfo
         // Get the Raw file information
         try {
             $this->_raw = $this->_getID3->analyze($this->filename);
+
+            // Handle getID3 errors
+            if (isset($this->_raw["error"])) {
+                debug_event('getID3', "Errors while parsing tags: " . json_encode($this->_raw["error"]), 1);
+            } elseif (isset($this->_raw["warning"])) {
+                debug_event('getID3', "Warnings while parsing tags: " . json_encode($this->_raw["warning"]), 3);
+            }
 
             return $this->_raw;
         } catch (Exception $e) {
