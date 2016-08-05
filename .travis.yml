@@ -16,4 +16,5 @@ before_script:
 
 script:
  - scripts/tests/syntax.sh
+ - cat .php_cs
  - scripts/tests/codestyle.sh
