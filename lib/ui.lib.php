@@ -6,7 +6,7 @@
  * things like a confirmation box, etc and so forth
  *
  */
- 
+
 /**
  *
  * LICENSE: GNU Affero General Public License, version 3 (AGPLv3)
